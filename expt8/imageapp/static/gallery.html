@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> INTERACTIVE IMAGE GALLERY</h1>
+    <div class="gallery-wrap">
+        <img src="back.PNG" id="backBtn">
+        <div class="gallery">
+    <div>
+        <span> <img src="image1.PNG"></span>
+        <span> <img src="image2.PNG"></span>
+        <span> <img src="image3.PNG"></span>
+    </div>
+        <div>
+        <span> <img src="image4.PNG"></span>
+        <span> <img src="image5.PNG"></span>
+        <span> <img src="image6.PNG"></span>
+    </div>
+    </div>
+   <img src="next.PNG" id="nextBtn">
+   </div> 
+   <script>
+
+      let scrollcontainer = document.querySelector(".gallery");
+      let backBtn = document.getElementById("backBtn");
+      let nextBtn = document.getElementById("nextBtn");
+
+      scrollcontainer.addEventListener("wheel", (evt) =>{
+        evt.preventDefault();
+        scrollcontainer.scrollLeft += evt.deltaY;
+        scrollcontainer.style.scrollBehavior="auto"
+      })
+      nextBtn.addEventListener("click", ()=> {
+        scrollcontainer.style.scrollBehavior="smooth"
+        scrollcontainer.scrollLeft +=500;
+        
+      })
+      backBtn.addEventListener("click", ()=> {
+        scrollcontainer.style.scrollBehavior="smooth"
+        scrollcontainer.scrollLeft -=500;
+        
+      })
+
+
+
+   </script>
+</body>
+</html>
