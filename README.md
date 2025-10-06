@@ -128,6 +128,7 @@ body{
 ```
 # OUTPUT:
 ![alt text](expt8.PNG)
-<video controls src="image gallery.mp4" title="Title"></video>
+![alt text](image-gallery.gif)
+
 # RESULT:
 The program for designing an interactive image gallery using HTML, CSS and JavaScript is executed successfully.
